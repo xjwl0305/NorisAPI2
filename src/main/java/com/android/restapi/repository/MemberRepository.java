@@ -1,6 +1,6 @@
 package com.android.restapi.repository;
 
-import com.android.restapi.model.post;
+//import com.android.restapi.model.post;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -19,10 +19,4 @@ public interface MemberRepository extends JpaRepository<user, Integer> {
     List<user> checkID(String id);
     @Query("select u from user u where u.uid= :uid")
     user findOneUser(int uid);
-
-//    @Modifying
-//    @Query("insert INTO user (id, password, name, phone, card, age, address, gender, userType)" +
-//            "VALUES(:id, :password, :name, :phone, :card, :age, :address, :gender, :userType)")
-//    @Transactional
-//    void signup(String id, String password, String name, int phone, int card, int age, String address, int gender, int userType);
 }

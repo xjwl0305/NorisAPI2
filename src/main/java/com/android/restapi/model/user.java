@@ -15,37 +15,21 @@ public class user {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="uid")
     public int uid;
+    public String Name;
     public String id;
     public String password;
-    public int phone;
-    public int card;
-    public int age;
-    public int gender;
-    public int userType;
-    public String address;
-    public String nickname;
+    public String email;
+    public String phone;
+    public String company;
 
-    public user(String id, String password, int phone, int age, int gender, int userType, String address, String nickname, int card){
+    public user(String Name, String id, String password, String email, String phone, String company){
+        this.Name = Name;
         this.id = id;
         this.password = password;
-        this.address = address;
-        this.nickname = nickname;
-        this.card = card;
+        this.email = email;
         this.phone = phone;
-        this.age = age;
-        this.gender = gender;
-        this.userType = userType;
+        this.company = company;
     }
     public user() {
-    }
-
-    public int getCard() {
-        return card;
-    }
-    public int getUid(){
-        return uid;
-    }
-    public int getUserType(){
-        return this.userType;
     }
 }

@@ -4,10 +4,10 @@ server:
 spring:
   data:
     maria:
-      jdbc-url: jdbc:mariadb://localhost:3306/software_project
+      jdbc-url: jdbc:mariadb://3.36.127.118:3306/NorisWebDB
       driver-class-name: org.mariadb.jdbc.Driver
-      username: root
-      password: yoon8863
+      username: connection
+      password: 1234
   jpa:
     properties:
       hibernate:
