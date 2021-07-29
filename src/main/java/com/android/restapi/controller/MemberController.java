@@ -21,7 +21,7 @@ public class MemberController {
 
     @Autowired
     public MemberRepository memberRepository;
-
+    @CrossOrigin
     @RequestMapping("/checkID")
     public response checkID(@RequestBody Map<String, Object> param){
         String id = (String) param.get("id");
